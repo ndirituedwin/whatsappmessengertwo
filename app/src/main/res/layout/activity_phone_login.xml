@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginandRegisterActivity.PhoneLoginActivity">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="0dp"
+      android:layout_marginLeft="0dp"
+      android:layout_marginTop="0dp"
+      android:layout_marginBottom="10dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+              android:id="@+id/phone_number_input"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentLeft="true"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:layout_marginTop="100dp"
+
+              android:hint="enter phone number starting with country code"
+              android:drawableLeft="@drawable/phone"
+              />
+          <EditText
+              android:id="@+id/phone_number_verification"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentLeft="true"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:layout_below="@+id/phone_number_input"
+              android:layout_marginTop="4dp"
+
+              android:hint="enter verificationcode"
+              android:drawableLeft="@drawable/password"
+              android:visibility="invisible"
+              />
+          <Button
+              android:id="@+id/send_verification_codebutton"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/buttons"
+              android:text="Send Verification code"
+              android:textAllCaps="false"
+              android:textColor="@android:color/background_light"
+              android:layout_below="@+id/phone_number_verification"
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
+              />
+          <Button
+              android:id="@+id/verify_codebtn"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/buttons"
+              android:text="Send Verification code"
+              android:textAllCaps="false"
+              android:textColor="@android:color/background_light"
+              android:layout_below="@+id/send_verification_codebutton"
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
+              android:visibility="invisible"
+              />
+
+
+      </RelativeLayout>
+
+  </ScrollView>
+
+</RelativeLayout>

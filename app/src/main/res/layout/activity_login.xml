@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginandRegisterActivity.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+       android:layout_marginBottom="10dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/login_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/images"
+                android:scaleType="fitCenter"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                 android:hint="email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/inputs"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/login_image"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:drawableStart="@drawable/email"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/email" />
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:background="@drawable/inputs"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/login_email"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:drawableStart="@drawable/password"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/email" />
+            <TextView
+                android:id="@+id/forgot_password_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/login_password"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textAlignment="textEnd"
+                android:textStyle="italic"
+                android:textColor="@color/colorAccent"
+                android:layout_centerHorizontal="true"
+                android:text="Forgot pasword?"
+                android:gravity="end" />
+           <Button
+               android:id="@+id/login_button"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_below="@+id/forgot_password_link"
+               android:layout_marginLeft="15dp"
+               android:layout_marginRight="15dp"
+               android:text="Login"
+               android:textAllCaps="false"
+               android:background="@drawable/buttons"
+               />
+            <TextView
+                android:id="@+id/dont_have_an_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/login_button"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="italic"
+                android:textColor="#9C27B0"
+                android:layout_centerHorizontal="true"
+                android:text="Dont have an account?"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:id="@+id/login_with"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/dont_have_an_account"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="italic"
+                android:textColor="#9C27B0"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:text="Or login with your mobile"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/login_with_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/login_with"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Mobile login"
+                android:textAllCaps="false"
+                android:drawableStart="@drawable/phone"
+                android:background="@drawable/buttons"
+                android:drawableLeft="@drawable/phone" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

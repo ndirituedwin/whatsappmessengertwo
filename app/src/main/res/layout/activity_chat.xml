@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".Chats.ChatActivity">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/chat_toolbar"
+        ></include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_message_list"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/chat_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+         android:layout_above="@id/chat_linear_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chat_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_light"
+        android:layout_alignParentLeft="true">
+        <ImageButton
+            android:id="@+id/send_files_button"
+            android:layout_width="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/send_files"/>
+
+        <EditText
+            android:id="@+id/enter_private_message"
+            android:hint="send hi..."
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@+id/send_files_button"
+            android:layout_toStartOf="@+id/send_private_message_button"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/send_private_message_button"
+            android:layout_toRightOf="@+id/send_files_button" />
+        <ImageButton
+            android:id="@+id/send_private_message_button"
+            android:layout_width="50dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/send_message"
+            android:layout_alignParentRight="true"
+            android:layout_height="38dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
